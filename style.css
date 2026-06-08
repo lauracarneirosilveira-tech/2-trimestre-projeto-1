@@ -1,0 +1,348 @@
+/* ==========================================================================
+   RESET DE ESTILOS E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --cor-principal: #ff4500; /* Laranja CrossFit */
+    --cor-fundo-escura: #111111;
+    --cor-fundo-clara: #161616;
+    --cor-card: #1a1a1a;
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #cccccc;
+}
+
+html {
+    scroll-behavior: smooth; /* Scroll suave nativo */
+}
+
+body {
+    background-color: var(--cor-fundo-escura);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding-top: 80px; /* Evita que o menu fixo tape o conteúdo inicial */
+}
+
+/* ==========================================================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: #000000;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-principal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Menu para Computador */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--cor-principal);
+}
+
+/* Botão do Menu Mobile (Hambúrguer) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--cor-texto);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   SEÇÃO HERO (BANNER PRINCIPAL)
+   ========================================================================== */
+.hero {
+    height: calc(100vh - 80px);
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1920') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--cor-principal);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    max-width: 650px;
+    color: var(--cor-texto-secundario);
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    padding: 14px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border-color: var(--cor-principal);
+    color: var(--cor-principal);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS E CONTEÚDO
+   ========================================================================== */
+section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--cor-principal);
+    margin: 15px auto 0;
+}
+
+.texto-destaque {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--cor-texto-secundario);
+    font-size: 1.1rem;
+}
+
+/* Sistema de Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Cards de Benefícios */
+.card {
+    background-color: var(--cor-card);
+    padding: 40px 30px;
+    border-radius: 6px;
+    border: 1px solid #252525;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--cor-principal);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   TABELA DE PLANOS / PREÇOS
+   ========================================================================== */
+.planos {
+    background-color: var(--cor-fundo-clara);
+}
+
+.plano-card {
+    background-color: #000000;
+    padding: 45px 35px;
+    border-radius: 6px;
+    border-top: 5px solid var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+/* Destaque para o plano mais vendido */
+.plano-card.destaque {
+    transform: scale(1.05);
+    border-top-width: 8px;
+    position: relative;
+}
+
+.plano-card h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.plano-card .preco {
+    font-size: 2.2rem;
+    color: var(--cor-principal);
+    margin: 25px 0;
+    font-weight: 800;
+}
+
+.plano-card ul {
+    list-style: none;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.plano-card ul li {
+    margin-bottom: 12px;
+    color: var(--cor-texto-secundario);
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Ícone de "check" antes dos itens do plano */
+.plano-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   CONTATO E RODAPÉ
+   ========================================================================== */
+.contato {
+    background-color: var(--cor-fundo-clara);
+}
+
+.contato p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contato .Destaque-hora {
+    margin-top: 25px;
+    color: var(--cor-principal);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #555555;
+    border-top: 1px solid #111111;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .hero h1 { font-size: 3rem; }
+    .plano-card.destaque { transform: scale(1); } /* Remove o aumento em telas pequenas */
+    section { padding: 70px 5%; }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.3rem; }
+    .hero p { font-size: 1rem; }
+    
+    /* Ativação do Menu Hamburguer Visualmente */
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: #000000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+        transition: left 0.4s ease;
+    }
+
+    /* Classe que o JavaScript vai injetar para abrir o menu */
+    nav ul.active {
+        left: 0;
+    }
+
+    /* Animação do botão hambúrguer ao abrir */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}

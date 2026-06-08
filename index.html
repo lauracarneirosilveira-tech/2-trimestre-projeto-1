@@ -1,1 +1,287 @@
-Os benefícios do crossfit
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge CrossFit | Supere Seus Limites</title>
+    <style>
+        /* Reset de Estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho / Menu */
+        header {
+            background-color: #000;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ff4500;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff4500;
+        }
+
+        /* Seção Hero (Banner Principal) */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1920') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 span {
+            color: #ff4500;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e03d00;
+            transform: scale(1.05);
+        }
+
+        /* Seções Gerais */
+        section {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #ff4500;
+            margin: 10px auto 0;
+        }
+
+        /* Benefícios (Cards) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: #ff4500;
+        }
+
+        .card h3 {
+            color: #ff4500;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Tabela de Preços / Planos */
+        .planos {
+            background-color: #161616;
+        }
+
+        .plano-card {
+            background-color: #000;
+            padding: 40px;
+            border-radius: 8px;
+            border-top: 5px solid #ff4500;
+        }
+
+        .plano-card .preco {
+            font-size: 2rem;
+            color: #ff4500;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .plano-card ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .plano-card ul li {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            color: #777;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FORGE BOX</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#planos">Planos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Força não se ganha.<br><span>Ela se forja.</span></h1>
+        <p>Descubra a sua melhor versão com treinos dinâmicos, comunidade unida e coaches certificados prontos para te guiar.</p>
+        <a href="#planos" class="btn">Começar Treino Experimental</a>
+    </section>
+
+    <section id="sobre">
+        <h2>O que é o CrossFit?</h2>
+        <p style="max-width: 800px; margin: 0 auto; color: #ccc;">
+            O CrossFit é um programa de treinamento de força e condicionamento físico geral baseado em movimentos funcionais, feitos em alta intensidade e constantemente variados. Combinando levantamento de peso, ginástica e corrida, cada treino (WOD) é um desafio único adaptável para qualquer nível de preparo físico.
+        </p>
+    </section>
+
+    <section id="beneficios" style="background-color: #161616;">
+        <h2>Por que treinar conosco?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Comunidade</h3>
+                <p>Aqui ninguém treina sozinho. Nossa comunidade apoia e incentiva cada membro a superar seus limites diariamente.</p>
+            </div>
+            <div class="card">
+                <h3>Coaching Elite</h3>
+                <p>Profissionais certificados acompanham de perto a execução de cada movimento para garantir sua evolução com segurança.</p>
+            </div>
+            <div class="card">
+                <h3>Resultados Reais</h3>
+                <p>Queima calórica acelerada, ganho de massa magra, mais energia, flexibilidade e resistência para o seu dia a side.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos">
+        <h2>Escolha seu Plano</h2>
+        <div class="grid">
+            <div class="plano-card">
+                <h3>Plano Light</h3>
+                <div class="preco">R$ 150/mês</div>
+                <ul>
+                    <li>3x por semana</li>
+                    <li>Acesso ao App de treinos</li>
+                    <li>WODs padrão</li>
+                </ul>
+                <a href="#" class="btn">Assinar</a>
+            </div>
+            <div class="plano-card" style="transform: scale(1.05); border-top-width: 8px;">
+                <h3>Plano Monstro</h3>
+                <div class="preco">R$ 220/mês</div>
+                <ul>
+                    <li>Acesso Livre (Segunda a Sábado)</li>
+                    <li>Aulas de LPO e Ginástica inclusas</li>
+                    <li>Check-in via App</li>
+                    <li>Suporte nutricional básico</li>
+                </ul>
+                <a href="#" class="btn">Mais Vendido</a>
+            </div>
+            <div class="plano-card">
+                <h3>Plano Anual</h3>
+                <div class="preco">R$ 180/mês</div>
+                <ul>
+                    <li>Acesso Livre</li>
+                    <li>Contrato de 12 meses</li>
+                    <li>Desconto em eventos do Box</li>
+                </ul>
+                <a href="#" class="btn">Garantir Desconto</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" style="background-color: #161616;">
+        <h2>Venha nos Visitar</h2>
+        <p>Endereço: Rua da Força, 180 - Bairro do WOD</p>
+        <p>Telefone / WhatsApp: (11) 99999-9999</p>
+        <p style="margin-top: 20px; color: #ff4500;">Horário de Funcionamento: Seg a Sex: 06h às 22h | Sáb: 08h às 12h</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Forge CrossFit Box. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
